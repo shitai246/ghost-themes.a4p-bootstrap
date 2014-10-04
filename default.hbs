@@ -25,7 +25,7 @@
     <div class="header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
       <div class="container text-center">
           {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-          <h1 class="page-title">{{@blog.title}}</h1>
+          <h1 class="page-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
           <em>{{@blog.description}}</em>
           <hr />
       </div>
@@ -33,12 +33,14 @@
 
     <div class="container">
       <div class="col-md-8">
+
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- a4p.me -->
+        <!-- a4p.me-header -->
         <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
+             style="display:block"
              data-ad-client="ca-pub-0311791960574953"
-             data-ad-slot="9006664522"></ins>
+             data-ad-slot="2650576525"
+             data-ad-format="auto"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
