@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content" role="main">
+
+    {{! Everything inside the #post tags pulls data from the post }}
+    {{#post}}
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{{title}}}</h3>
+        </div>
+        <div class="panel-body">
+          {{content}}
+        </div>
+        <div class="panel-footer">
+          {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="" />{{/if}}
+          {{author}}
+          {{tags prefix=" on "}}
+          <span>{{date format="YYYY/MM/DD"}}</span>
+        </div>
+      </div>
+
+    {{/post}}
+
+</main>

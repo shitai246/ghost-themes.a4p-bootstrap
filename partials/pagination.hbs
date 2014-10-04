@@ -1,0 +1,11 @@
+<nav class="text-center" role="navigation">
+  <ul class="pager">
+    {{#if prev}}
+      <li><a class="newer-posts" href="{{page_url prev}}">Newer Posts</a></li>
+    {{/if}}
+    <span class="page-number">Page {{page}} of {{pages}}</span>
+    {{#if next}}
+      <li><a class="older-posts" href="{{page_url next}}">Older Posts</a></li>
+    {{/if}}
+  </ul>
+</nav>

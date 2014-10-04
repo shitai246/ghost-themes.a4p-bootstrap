@@ -1,0 +1,23 @@
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><a href="{{url}}">{{{title}}}</a></h3>
+  </div>
+  <div class="panel-body">
+    {{excerpt words="30"}}
+    <div class="pull-right"><a class="read-more" href="{{url}}">Read more &raquo;</a></div>
+  </div>
+  <div class="panel-footer">
+    {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+    {{author}}
+    {{tags prefix=" on "}}
+    <span>{{date format="YYYY/MM/DD"}}</span>
+  </div>
+</div>
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

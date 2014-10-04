@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {{! Document Settings }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap-theme.min.css"}}" />
+    <script src="{{asset "js/jquery-2.1.1.min.js"}}"></script>
+    <script src="{{asset "js/bootstrap.min.js"}}"></script>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+
+    <div class="header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+      <div class="container text-center">
+          {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+          <h1 class="page-title">{{@blog.title}}</h1>
+          <em>{{@blog.description}}</em>
+          <hr />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-8">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- a4p.me -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-0311791960574953"
+             data-ad-slot="9006664522"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        <script type="text/javascript" src="http://rot0.a8.net/jsa/82a031d7232d05fca109a11cced7415d/441954d29ad2a375cef8ea524a2c7e73.js"></script>
+
+      </div>
+      <div class="col-md-4">
+
+        <div class="panel panel-default panel-body text-center">
+          <h4>当BlogはさくらVPSで動いています。</h4>
+          <a href="http://px.a8.net/svt/ejp?a8mat=1TUQP1+F5YK1U+D8Y+C3BAP" target="_blank"><img border="0" width="300" height="300" alt="" src="http://www20.a8.net/svt/bgt?aid=110609317917&wid=003&eno=01&mid=s00000001717002031000&mc=1"></a>
+          <img border="0" width="1" height="1" src="http://www13.a8.net/0.gif?a8mat=1TUQP1+F5YK1U+D8Y+C3BAP" alt="">
+        </div>
+
+        <a class="twitter-timeline" href="https://twitter.com/shitai246_" data-widget-id="350069686177779712">@shitai246_ からのツイート</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+
+        <div class="panel panel-default panel-body text-center">
+          <script type="text/javascript" src="http://rot9.a8.net/jsa/82a031d7232d05fca109a11cced7415d/af032fbcb07ffc7bd2569d86ae4ce1f5.js"></script>
+        </div>
+
+        <div class="panel panel-default panel-body text-center">
+          <iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?t=a8-affi-1821-22&o=9&p=12&l=ur1&category=amazonrotate&f=ifr" width=300 height=250 scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe> <img border="0" width="1" height="1" src="http://www12.a8.net/0.gif?a8mat=1NWF3F+BT3K8Y+249K+BWGDT" alt="">
+
+          <!-- Rakuten Widget FROM HERE --><script type="text/javascript">rakuten_affiliateId="0ea62065.34400275.0ea62066.204f04c0";rakuten_items="ctsmatch";rakuten_genreId="0";rakuten_recommend="off";rakuten_design="slide";rakuten_size="300x250";rakuten_target="_blank";rakuten_border="on";rakuten_auto_mode="on";rakuten_adNetworkId="a8Net";rakuten_adNetworkUrl="http%3A%2F%2Frpx.a8.net%2Fsvt%2Fejp%3Fa8mat%3D1U7I03%2B1JYT6Q%2B2HOM%2BBS629%26rakuten%3Dy%26a8ejpredirect%3D";rakuten_pointbackId="a09032747531_1U7I03_1JYT6Q_2HOM_BS629";rakuten_mediaId="20011813";
+          </script><script type="text/javascript" src="//xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js">
+          </script><!-- Rakuten Widget TO HERE -->
+          <img border="0" width="1" height="1" src="http://www16.a8.net/0.gif?a8mat=1U7I03+1JYT6Q+2HOM+BS629" alt="">
+
+          <script type="text/javascript">
+          var nend_params = {"media":7032,"site":78067,"spot":182223,"type":1,"oriented":4};
+          </script>
+          <script type="text/javascript" src="http://js1.nend.net/js/nendAdLoader.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer navbar-fixed-bottom">
+      <div class="container">
+        <span class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</span>
+        <span class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></span>
+        <div class="pull-right">
+          <a target="_blank" href="https://twitter.com/shitai246_"><img src="{{asset "img/twitter.png"}}" /></a>
+          <a target="_blank" href="https://www.facebook.com/taisuke.shiratori"><img src="{{asset "img/facebook.png"}}" /></a>
+          <a target="_blank" href="https://github.com/shitai246"><img src="{{asset "img/github_alt.png"}}" /></a>
+          <a href="{{@blog.url}}/rss/"><img src="{{asset "img/feed.png"}}" /></a>
+        </div>
+      </div>
+    </div>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21640262-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
